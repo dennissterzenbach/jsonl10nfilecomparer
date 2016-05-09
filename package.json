@@ -1,6 +1,6 @@
 {
   "name": "jsonl10nfilecomparer",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Tool to compare a list of JSON files to find missing or additional keys compared to a JSON master file.",
   "main": "index.js",
   "scripts": {
