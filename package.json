@@ -1,0 +1,19 @@
+{
+  "name": "jsonl10nfilecomparer",
+  "version": "1.0.2",
+  "description": "Tool to compare a list of JSON files to find missing or additional keys compared to a JSON master file.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dennissterzenbach/jsonl10nfilecomparer.git"
+  },
+  "author": "Dennis Sterzenbach <dennis.sterzenbach@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dennissterzenbach/jsonl10nfilecomparer/issues"
+  },
+  "homepage": "https://github.com/dennissterzenbach/jsonl10nfilecomparer#readme"
+}
