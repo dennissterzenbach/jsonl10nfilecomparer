@@ -1,8 +1,8 @@
 {
   "name": "jsonfilecomparer",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Tool to compare a list of JSON files to find missing or additional keys compared to a JSON master file.",
-  "main": "index.js",
+  "main": "jsonfilecomparer.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

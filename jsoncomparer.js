@@ -7,7 +7,7 @@
 
     var NodeTypeDetector = require('./nodetypedetector');
 
-    var MAX_HIERARCHY_DEPTH = 10;
+    var MAX_HIERARCHY_DEPTH = 500;
 
     ////////////////////////////////////////////////////////////////////////////////////////////////
     // COMPARER
@@ -53,14 +53,18 @@
         }
 
         for (var key in masterObject) {
-            type = NodeTypeDetector.getNodeType(masterObject[key]);
+            if (masterObject.hasOwnProperty(key)) {
+                type = NodeTypeDetector.getNodeType(masterObject[key]);
 
-            if (!comparedObject.hasOwnProperty(key)) {
-                listOfFindings.push(prefix + key);
-            } else if (type === 'object') {
-                // traverse the structure in both objects
-                if (comparedObject.hasOwnProperty(key)) {
-                    iterateNodes(listOfFindings, masterObject[key], comparedObject[key], prefix + key, ++depth);
+                if (!comparedObject.hasOwnProperty(key)) {
+                    listOfFindings.push(prefix + key);
+                }
+
+                if (type === 'object') {
+                    // traverse the structure in both objects
+                    if (comparedObject.hasOwnProperty(key)) {
+                        iterateNodes(listOfFindings, masterObject[key], comparedObject[key], prefix + key, ++depth);
+                    }
                 }
             }
         }

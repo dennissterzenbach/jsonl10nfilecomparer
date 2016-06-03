@@ -9,6 +9,11 @@ var JsonComparer = require('./jsoncomparer');
 var ResultPrinter = require('./resultprinter');
 var ConsoleOutputAdapter = require('./consoleoutputadapter');
 var verbose = (process.argv.length > 1 && process.argv.indexOf('--verbose') > 1);
+var cmdLineArguments = process.argv;
+
+if (verbose) {
+    cmdLineArguments.splice(cmdLineArguments.indexOf('--verbose'), 1);
+}
 
 var masterFilename = process.argv[2];
 var otherFilenames = process.argv.slice(3);

@@ -3,7 +3,7 @@ Tool to compare a list of JSON files to find missing or additional keys compared
 
 Example command line:
 ```shell
-$ node index.js master.json another.json even-another.json
+$ node jsonfilecomparer.js master.json another.json even-another.json
 ```
 
 This will compare 
